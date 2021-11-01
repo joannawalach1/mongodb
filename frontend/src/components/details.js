@@ -44,20 +44,24 @@ export default class Details extends Component {
                 position: "absolute",
                 textAlign: "center",
                 marginTop: "50px"
-              }}
-            >
+              }}>
+              <table>
+              <tr>
+                                <td>NAME</td>
+                                <td>SURNAME</td>
+                                <td>AGE</td>
+                                <td>POSITION</td>
+                            </tr>
+                            </table>
+            
+
               {this.state.buttonClicked
                 ? this.state.data.map(data => {
                     return (
                       <React.Fragment>
 
                         <table>
-                            <tr>
-                                <th>NAME</th>
-                                <th>SURNAME</th>
-                                <th>AGE</th>
-                                <th>POSITION</th>
-                            </tr>
+                            
                             <tr>
                                 <th>{data.name}</th>
                                 <th>{data.surname}</th>
