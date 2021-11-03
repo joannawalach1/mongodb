@@ -46,24 +46,28 @@ export default class Details extends Component {
                 marginTop: "50px"
               }}
             >
+              <div>
+              <table>
+                         <tr>
+                           <th>NAME</th>
+                           <th>SURNAME</th>
+                           <th>AGE</th>
+                           <th>POSITION</th>
+                         </tr>
+                       </table>
+              </div>
               {this.state.buttonClicked
                 ? this.state.data.map(data => {
                     return (
                       <React.Fragment>
-                        <p>
-                          {" "}
-                          <b>name</b> : {data.name}
-                        </p>
-                        <p>
-                          <b>surname</b> : {data.surname}
-                        </p>
-                        <p>
-                          <b>age</b> : {data.age}
-                        </p>
-                        <p>
-                          <b>position</b> : {data.position}
-                        </p>
-                        <hr />
+                       <table>
+                         <tr>
+                           <th>{data.name}</th>
+                           <th>{data.surname}</th>
+                           <th>{data.age}</th>
+                           <th>{data.position}</th>
+                         </tr>
+                       </table>
                       </React.Fragment>
                     );
                   })
