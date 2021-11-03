@@ -44,31 +44,26 @@ export default class Details extends Component {
                 position: "absolute",
                 textAlign: "center",
                 marginTop: "50px"
-              }}>
-              <table>
-              <tr>
-                                <td>NAME</td>
-                                <td>SURNAME</td>
-                                <td>AGE</td>
-                                <td>POSITION</td>
-                            </tr>
-                            </table>
-            
-
+              }}
+            >
               {this.state.buttonClicked
                 ? this.state.data.map(data => {
                     return (
                       <React.Fragment>
-
-                        <table>
-                            
-                            <tr>
-                                <th>{data.name}</th>
-                                <th>{data.surname}</th>
-                                <th>{data.age}</th>
-                                <th>{data.position}</th>
-                            </tr>
-                            </table>
+                        <p>
+                          {" "}
+                          <b>name</b> : {data.name}
+                        </p>
+                        <p>
+                          <b>surname</b> : {data.surname}
+                        </p>
+                        <p>
+                          <b>age</b> : {data.age}
+                        </p>
+                        <p>
+                          <b>position</b> : {data.position}
+                        </p>
+                        <hr />
                       </React.Fragment>
                     );
                   })
@@ -79,4 +74,4 @@ export default class Details extends Component {
       </div>
     );
   }
-}
+} 
