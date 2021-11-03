@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./details.css";
 
 export default class Details extends Component {
   constructor() {
@@ -48,11 +49,12 @@ export default class Details extends Component {
             >
               <div>
               <table>
-                         <tr>
-                           <th>NAME</th>
-                           <th>SURNAME</th>
-                           <th>AGE</th>
-                           <th>POSITION</th>
+                         <tr className = "table_heading">
+                           <th className = "table_name">NAME</th>
+                           <th className = "table_surname">SURNAME</th>
+                           <th className = "table_age">AGE</th>
+                           <th className = "table_position">POSITION</th>
+                           <th className = "table_action">ACTION</th>
                          </tr>
                        </table>
               </div>
@@ -61,11 +63,15 @@ export default class Details extends Component {
                     return (
                       <React.Fragment>
                        <table>
-                         <tr>
-                           <th>{data.name}</th>
-                           <th>{data.surname}</th>
-                           <th>{data.age}</th>
-                           <th>{data.position}</th>
+                         <tr className = "table_row">
+                           <th className = "table_name">{data.name}</th>
+                           <th className = "table_surname">{data.surname}</th>
+                           <th className = "table_age">{data.age}</th>
+                           <th className = "table_position">{data.position}</th>
+                           <th>
+                             <button>edit</button>
+                             <button>remove</button>
+                           </th>
                          </tr>
                        </table>
                       </React.Fragment>

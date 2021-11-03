@@ -1,0 +1,29 @@
+button {
+    width: 200px;
+    background-color: darkgreen;
+    color:white;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: darkolivegreen;
+}
+
+button:active {
+    background-color: darkslateblue;
+}
+
+.table_heading {
+background-color: coral;    
+}
+
+.table_row {
+    background-color: darkgray;
+}
+
+.table_name, .table_surname, .table_age, .table_position, .table_action {
+width: 10rem;
+text-align:left;
+padding-left: 20px;
+}
+
